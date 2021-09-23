@@ -226,8 +226,7 @@
           brand: document.querySelector("#brand").value,
           description: document.querySelector("#description").value,
           imageUrl: document.querySelector("#image").value,
-          price: parseInt(document.querySelector("#price").value),
-          id: id
+          price: parseInt(document.querySelector("#price").value)
         };
 
         event.preventDefault();
@@ -249,7 +248,7 @@
           );
           let response = await resp.json()
           if (itemId) {
-            displayAlert("success" , "Product : " + response._id + " edited succesfully")
+            displayAlert("success" , "Product : " + itemId + " edited succesfully")
           } else {
             displayAlert("info" , "Product : " + obj._id + " added succesfully")
           }

@@ -28,10 +28,11 @@
           </ul>
         </div>
       </nav>
-      <div class="col-12 d-flex">
-          <div class="row d-flex justify-content-center">
+      
+      <div class="container">
+        <div class="row">
 
-          </div>
+        </div>
       </div>
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -42,10 +43,11 @@
         const container = document.querySelector(".row")
         response.forEach(element => {
             const card = `
-            <div class="card" style="width: 13rem;">
+            <div class="card" style="width:200px; heigth:250px; margin-top: 50px;">
                 <img src="${element.imageUrl}" class="card-img-top">
                 <div class="card-body">
-                    <h5 class="card-title">${element.brand}</h5>
+                    <h5 class="card-title">${element.name}</h5>
+                    <h6 class="card-title">${element.brand}</h6>
                     <p class="card-text">${element.description}</p>
                     <h6><span class="badge badge-secondary">${element.price}</span></h6><a href="./details.html?id=${element._id}">VIEW DETAILS</a>
                 </div>
